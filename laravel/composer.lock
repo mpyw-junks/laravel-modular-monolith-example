@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9be6d5f25657f3197250ff758b6e6c23",
+    "content-hash": "e5f65865187270d12dae4b1ffd3e28cc",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2127,6 +2127,48 @@
                 "source": "https://github.com/opis/closure/tree/3.6.2"
             },
             "time": "2021-04-09T13:42:10+00:00"
+        },
+        {
+            "name": "packages/member",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../modules/Member",
+                "reference": "fa2fcef365bb111f4bad7d4be6a1083337cdc84e"
+            },
+            "require": {
+                "illuminate/contracts": "^8.0",
+                "illuminate/database": "^8.0",
+                "illuminate/support": "^8.0",
+                "php": "^7.3|^8.0"
+            },
+            "require-dev": {
+                "fakerphp/faker": "^1.9.1",
+                "mockery/mockery": "^1.4.4",
+                "phpunit/phpunit": "^9.5.8"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": []
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Packages\\Member\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Packages\\Member\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "phpoption/phpoption",
@@ -7951,7 +7993,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "packages/member": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
