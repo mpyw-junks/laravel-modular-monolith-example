@@ -46,7 +46,7 @@
     "repositories": [
         {
             "type": "path",
-            "url": "../modules/Member"
+            "url": "../packages/Member"
         }
     ],
     "extra": {
