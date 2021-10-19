@@ -1,8 +1,6 @@
 {
-    "name": "laravel/laravel",
+    "name": "mpyw/laravel-modular-monolith-example",
     "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
@@ -10,7 +8,8 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.54",
         "laravel/sanctum": "^2.11",
-        "laravel/tinker": "^2.5"
+        "laravel/tinker": "^2.5",
+        "packages/member": "dev-master"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -42,11 +41,14 @@
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-        ],
-        "post-create-project-cmd": [
-            "@php artisan key:generate --ansi"
         ]
     },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../modules/Member"
+        }
+    ],
     "extra": {
         "laravel": {
             "dont-discover": []
